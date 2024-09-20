@@ -1,6 +1,5 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import Home from './pages/home.jsx'
 import Personagem from './pages/personagem.jsx'
@@ -17,7 +16,7 @@ const router = createBrowserRouter([
       
       { index: true, element: <Home/>},
       { path: 'personagem', element: <Personagem/>},
-      // { path: 'quiz', element: <Solucao/>},
+      { path: 'quiz', element: <Quiz/>},
       { path: 'videos', element: <Videos/>},
       // { path: '*',element: <PageNotFound/>},
     ]

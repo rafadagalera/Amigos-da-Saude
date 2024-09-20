@@ -6,6 +6,11 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      'yanone': ['"Yanone Kaffeesatz"', 'sans-serif'],
+      'nunito': ['"Nunito"', 'sans-serif'],
+      'open-sans': ['"Open Sans"', 'sans-serif'],
+    },
     colors: {
       'verde-100': '#B2F2A3',
       'verde-200': '#5DDCA7',
@@ -19,7 +24,13 @@ export default {
       'azul-200': '#008AC8',
       'azul-300': '#006AC3',
       'amarelo-100': '#F9E5A0',
-    }
+      'azul-900': '#0A2144;',
+    },
+    backgroundImage: {
+      'vetor1': "url('/src/assets/vetor-home-1.svg')",
+      'vetor2': "url('/src/assets/vetor-home-2.svg')",
+      'vetor3': "url('/src/assets/vetor-home-3.svg')",
+    },
   },
   plugins: [],
 }
