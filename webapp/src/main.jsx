@@ -7,6 +7,7 @@ import Personagem from './pages/personagem.jsx'
 import Quiz from './pages/quiz.jsx'
 import Videos from './pages/videos.jsx'
 import './index.css'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 const router = createBrowserRouter([
   {
@@ -16,9 +17,9 @@ const router = createBrowserRouter([
       
       { index: true, element: <Home/>},
       { path: 'personagem', element: <Personagem/>},
-      { path: 'quiz', element: <Solucao/>},
+      // { path: 'quiz', element: <Solucao/>},
       { path: 'videos', element: <Videos/>},
-      { path: '*',element: <PageNotFound/>},
+      // { path: '*',element: <PageNotFound/>},
     ]
   }
 ]);
