@@ -30,6 +30,7 @@ export default {
       'vetor1': "url('/src/assets/vetor-home-1.svg')",
       'vetor2': "url('/src/assets/vetor-home-2.svg')",
       'vetor3': "url('/src/assets/vetor-home-3.svg')",
+      'banner': "url('/src/assets/banner-home.png')",
     },
   },
   plugins: [],

@@ -6,10 +6,10 @@ export default function Header() {
       <div className="container mx-auto flex h-full items-center justify-between">
         <div>LOGO</div>
         <nav className="flex gap-6">
-          <Link>Home</Link>
-          <Link>Personagem</Link>
-          <Link>Quiz</Link>
-          <Link>Videos</Link>
+          <Link to="/">Home</Link>
+          <Link to="/personagem">Personagem</Link>
+          <Link to="/quiz">Quiz</Link>
+          <Link to="/videos">Videos</Link>
         </nav>
       </div>
     </header>

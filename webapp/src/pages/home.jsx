@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <div className="h-screen pt-20">
-      <div className="h-[40vh] bg-amarelo-100">Banner</div>
+      <div className="bg-banner bg-cover h-[23rem]"></div>
 
       <div className="container mx-auto flex justify-between gap-20 pt-24">
         <div className="flex grow rounded-[4.5rem] border-2 border-azul-100 px-5 py-10">
