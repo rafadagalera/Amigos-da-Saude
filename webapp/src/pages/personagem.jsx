@@ -4,20 +4,25 @@ import { AvatarContext } from "../context/AvatarProvider";
 import { Link } from "react-router-dom";
 
 export default function Personagem() {
-  const { avatar, avatarInfo, setAvatar, trocarProximo, trocarAnterior } = useContext(AvatarContext);
+  const { avatar, avatarInfo, setAvatar, trocarProximo, trocarAnterior } =
+    useContext(AvatarContext);
 
   
   
   const salvarAvatar = () => {
     localStorage.setItem("avatar", JSON.stringify(avatar));
   };
-  console.log(avatar)
+  console.log(avatar);
 
   return (
-    <div className="pt-20 flex justify-between">
+    <div className="flex justify-between pt-20">
       <div className="relative w-96">
         <img className="absolute" src={avatarImg} alt="" />
-        <img className="absolute" src={avatarInfo.camisa[avatar.camisa]} alt="" />
+        <img
+          className="absolute"
+          src={avatarInfo.camisa[avatar.camisa]}
+          alt=""
+        />
         <img className="absolute" src={avatarInfo.calca[avatar.calca]} alt="" />
       </div>
 
@@ -33,8 +38,10 @@ export default function Personagem() {
           <p>calca</p>
           <button onClick={() => trocarProximo("calca")}>Próximo</button>
         </div>
-        <button onClick={salvarAvatar}>Salvar</button>
-        <Link to="/videos">Ver Videos</Link>
+        <div className="flex justify-between">
+          <button onClick={salvarAvatar}>Salvar</button>
+          <Link to="/videos">Ver Videos</Link>
+        </div>
       </div>
     </div>
   );
