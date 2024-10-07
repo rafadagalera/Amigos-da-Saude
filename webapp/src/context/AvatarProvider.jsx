@@ -1,9 +1,11 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const AvatarContext = createContext({});
 
 // eslint-disable-next-line react/prop-types
 export const AvatarProvider = ({ children }) => {
+  
+
   const avatarInfo = {
     camisa: [
       "",
@@ -22,6 +24,13 @@ export const AvatarProvider = ({ children }) => {
     camisa: 0,
     calca: 0,
   });
+
+  useEffect(() => {
+    const avatarSaved = JSON.parse(localStorage.getItem("avatar"));
+    if (avatarSaved) {
+      setAvatar(avatarSaved);
+    }
+  }, [setAvatar]);
 
   const trocarAnterior = (caracteristica) => {
     setAvatar((prevAvatar) => {

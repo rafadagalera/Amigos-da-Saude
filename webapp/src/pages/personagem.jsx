@@ -1,20 +1,13 @@
 import avatarImg from "../assets/avatar/avatar.svg";
-import camisaVerde from "../assets/avatar/camisa-verde.svg";
-import calcaPreta from "../assets/avatar/calca-preta.svg";
-import { useContext, useEffect } from "react";
+import { useContext,  } from "react";
 import { AvatarContext } from "../context/AvatarProvider";
 import { Link } from "react-router-dom";
 
 export default function Personagem() {
   const { avatar, avatarInfo, setAvatar, trocarProximo, trocarAnterior } = useContext(AvatarContext);
 
-  useEffect(() => {
-    const avatarSaved = JSON.parse(localStorage.getItem("avatar"));
-    if (avatarSaved) {
-      setAvatar(avatarSaved);
-    }
-  }, [setAvatar]);
-
+  
+  
   const salvarAvatar = () => {
     localStorage.setItem("avatar", JSON.stringify(avatar));
   };
