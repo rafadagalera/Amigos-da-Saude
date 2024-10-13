@@ -7,22 +7,36 @@ export const AvatarProvider = ({ children }) => {
   
 
   const avatarInfo = {
+    pele: [
+      "/src/assets/avatar/pele/homem-1.svg",
+      "/src/assets/avatar/pele/homem-2.svg",
+      "/src/assets/avatar/pele/homem-3.svg",
+      "/src/assets/avatar/pele/mulher-1.svg",
+      "/src/assets/avatar/pele/mulher-2.svg",
+      "/src/assets/avatar/pele/mulher-3.svg",
+    ],
     camisa: [
       "",
-      "./src/assets/avatar/camisa-verde.svg",
-      "./src/assets/avatar/camisa-cinza.svg",
+      "/src/assets/avatar/camisa/camisa-1.svg",
+      "/src/assets/avatar/camisa/camisa-2.svg",
     ],
     calca: [
       "",
-      "./src/assets/avatar/calca-marrom.svg",
-      "./src/assets/avatar/calca-preta.svg",
+      "/src/assets/avatar/calca/calca-1.svg",
+      "/src/assets/avatar/calca/calca-2.svg",
     ],
-    tenis: [],
+    tenis: [
+      "",
+      "/src/assets/avatar/tenis/tenis-1.svg",
+      "/src/assets/avatar/tenis/tenis-2.svg"
+    ],
   };
 
   const [avatar, setAvatar] = useState({
+    pele: 0,
     camisa: 0,
     calca: 0,
+    tenis: 0,
   });
 
   useEffect(() => {
