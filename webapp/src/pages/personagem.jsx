@@ -26,6 +26,11 @@ export default function Personagem() {
             src={avatarInfo.calca[avatar.calca]}
             alt=""
           />
+          <img
+            className="absolute"
+            src={avatarInfo.tenis[avatar.tenis]}
+            alt=""
+          />
         </div>
 
         <div className="flex flex-col gap-4 rounded-xl border px-5 py-3">

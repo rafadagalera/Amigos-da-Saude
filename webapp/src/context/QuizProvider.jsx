@@ -7,27 +7,127 @@ export const QuizProvider = ({ children }) => {
   const quizPerguntas = [
     {
       id: 1,
-      pergunta: "pergunta 1",
-      resposta: 1,
-      alternativas: {
-        alternativa1: "alternativa tivav tiva tiva",
-        alternativa2: "alternativa tivav tiva tiva",
-        alternativa3: "alternativa tivav tiva tiva",
-        alternativa4: "alternativa tivav tiva tiva",
-      },
+      tema: "Exame de sangue",
+      perguntas: [
+        {
+          id: 1,
+          pergunta: "pergunta 1",
+          resposta: 1,
+          alternativas: {
+            alternativa1: "alternativa tivav tiva tiva",
+            alternativa2: "alternativa tivav tiva tiva",
+            alternativa3: "alternativa tivav tiva tiva",
+            alternativa4: "alternativa tivav tiva tiva",
+          },
+        },
+        {
+          id: 2,
+          pergunta: "pergunta 2",
+          resposta: 3,
+          alternativas: {
+            alternativa1: "teste teste teste alternativa",
+            alternativa2: "ttetetetete",
+            alternativa3: "dsdasdasda",
+            alternativa4: "iago ta enchendo o saco pra caralho hoje",
+          },
+        },
+        {
+          id: 3,
+          pergunta: "pergunta 3",
+          resposta: 1,
+          alternativas: {
+            alternativa1: "alternativa tivav tiva tiva",
+            alternativa2: "alternativa tivav tiva tiva",
+            alternativa3: "alternativa tivav tiva tiva",
+            alternativa4: "alternativa tivav tiva tiva",
+          },
+        },
+        {
+          id: 4,
+          pergunta: "pergunta 4",
+          resposta: 3,
+          alternativas: {
+            alternativa1: "teste teste teste alternativa",
+            alternativa2: "ttetetetete",
+            alternativa3: "dsdasdasda",
+            alternativa4: "iago ta enchendo o saco pra caralho hoje",
+          },
+        },
+        {
+          id: 5,
+          pergunta: "pergunta 5",
+          resposta: 2,
+          alternativas: {
+            alternativa1: "alternativa tivav tiva tiva",
+            alternativa2: "alternativa tivav tiva tiva",
+            alternativa3: "alternativa tivav tiva tiva",
+            alternativa4: "alternativa tivav tiva tiva",
+          },
+        },
+      ]
     },
     {
       id: 2,
-      pergunta: "pergunta 2",
-      resposta: 3,
-      alternativas: {
-        alternativa1: "teste teste teste alternativa",
-        alternativa2: "ttetetetete",
-        alternativa3: "dsdasdasda",
-        alternativa4: "iago ta enchendo o saco pra caralho hoje",
-      },
+      tema: "Tomografia",
+      perguntas: [
+        {
+          id: 1,
+          pergunta: "pergunta 1 tomo",
+          resposta: 1,
+          alternativas: {
+            alternativa1: "alternativa tivav tiva tiva",
+            alternativa2: "alternativa tivav tiva tiva",
+            alternativa3: "alternativa tivav tiva tiva",
+            alternativa4: "alternativa tivav tiva tiva",
+          },
+        },
+        {
+          id: 2,
+          pergunta: "pergunta 2",
+          resposta: 3,
+          alternativas: {
+            alternativa1: "teste teste teste alternativa",
+            alternativa2: "ttetetetete",
+            alternativa3: "dsdasdasda",
+            alternativa4: "iago ta enchendo o saco pra caralho hoje",
+          },
+        },
+        {
+          id: 3,
+          pergunta: "pergunta 3",
+          resposta: 1,
+          alternativas: {
+            alternativa1: "alternativa tivav tiva tiva",
+            alternativa2: "alternativa tivav tiva tiva",
+            alternativa3: "alternativa tivav tiva tiva",
+            alternativa4: "alternativa tivav tiva tiva",
+          },
+        },
+        {
+          id: 4,
+          pergunta: "pergunta 4",
+          resposta: 3,
+          alternativas: {
+            alternativa1: "teste teste teste alternativa",
+            alternativa2: "ttetetetete",
+            alternativa3: "dsdasdasda",
+            alternativa4: "iago ta enchendo o saco pra caralho hoje",
+          },
+        },
+        {
+          id: 5,
+          pergunta: "pergunta 5",
+          resposta: 2,
+          alternativas: {
+            alternativa1: "alternativa tivav tiva tiva",
+            alternativa2: "alternativa tivav tiva tiva",
+            alternativa3: "alternativa tivav tiva tiva",
+            alternativa4: "alternativa tivav tiva tiva",
+          },
+        },
+      ]
     },
-  ];
+  ] 
 
   return (
     <QuizContext.Provider value={{ quizPerguntas }}>
