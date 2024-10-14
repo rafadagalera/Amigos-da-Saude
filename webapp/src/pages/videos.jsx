@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
-import { VideosContext } from "../context/VideosProvider";
+import { ExamesContext } from "../context/ExamesProvider";
 import { useContext, useState } from "react";
 
 export default function Videos() {
-  const { videos } = useContext(VideosContext);
+  const { exames } = useContext(ExamesContext);
 
-  const [filteredVideos, setFilteredVideos] = useState(videos);
+  const [filteredExames, setFilteredExames] = useState(exames);
 
-  const searchVideos = () => {
+  const searchExames = () => {
     const search = event.target.value.toLowerCase();
-    setFilteredVideos(
-      videos.filter((video) => video.name.toLowerCase().includes(search)),
+    setFilteredExames(
+      exames.filter((exame) => exame.name.toLowerCase().includes(search)),
     );
   };
 
@@ -19,15 +19,15 @@ export default function Videos() {
       <div className="flex flex-col items-center rounded-xl justify-center gap-5 border px-4 py-3">
         <input
           type="text"
-          onChange={() => searchVideos()}
+          onChange={() => searchExames()}
           className="rounded-md border"
         />
 
         <ul className="flex flex-col items-center justify-center gap-5">
-          {filteredVideos.map((video) => (
-            <li key={video.id} className="cursor-pointer border">
-              <Link to={video.id} className="">
-                <h2>{video.name}</h2>
+          {filteredExames.map((exame) => (
+            <li key={exame.id} className="cursor-pointer border">
+              <Link to={exame.id} className="">
+                <h2>{exame.name}</h2>
               </Link>
             </li>
           ))}
@@ -35,10 +35,10 @@ export default function Videos() {
       </div>
 
       <ul className="flex w-screen items-center justify-center gap-5">
-        {videos.map((video) => (
-          <li key={video.id} className="cursor-pointer border">
-            <Link to={video.id} className="">
-              <h2>{video.name}</h2>
+        {exames.map((exame) => (
+          <li key={exame.id} className="cursor-pointer border">
+            <Link to={exame.id} className="">
+              <h2>{exame.name}</h2>
             </Link>
           </li>
         ))}

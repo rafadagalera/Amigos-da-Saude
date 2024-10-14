@@ -6,11 +6,10 @@ import Home from "./pages/home.jsx";
 import Personagem from "./pages/personagem.jsx";
 import Quiz from "./pages/quiz.jsx";
 import Videos from "./pages/videos.jsx";
+import VideoPage from "./pages/videoPage.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { AvatarProvider } from "./context/AvatarProvider.jsx";
-import { VideosProvider } from "./context/VideosProvider.jsx";
-import VideoPage from "./pages/videoPage.jsx";
-import { QuizProvider } from "./context/QuizProvider.jsx";
+import { ExamesProvider } from "./context/ExamesProvider.jsx";
 
 const router = createBrowserRouter([
   {
@@ -30,11 +29,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AvatarProvider>
-      <QuizProvider>
-        <VideosProvider>
+        <ExamesProvider>
           <RouterProvider router={router} />
-        </VideosProvider>
-      </QuizProvider>
+        </ExamesProvider>
     </AvatarProvider>
   </StrictMode>,
 );

@@ -1,22 +1,22 @@
 import { useContext } from "react";
 import { AvatarContext } from "../context/AvatarProvider";
-import { VideosContext } from "../context/VideosProvider";
+import { ExamesContext } from "../context/ExamesProvider";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
 export default function VideoPage() {
   const { avatar, avatarInfo } = useContext(AvatarContext);
-  const { videos } = useContext(VideosContext);
+  const { exames } = useContext(ExamesContext);
   const navigate = useNavigate();
 
   const { id } = useParams("id");
-  const findVideo = videos.find((video) => video.id === id);
+  const findExame = exames.find((exame) => exame.id == id);
 
   let indexDialogo = 1;
-  const handleClickVideo = () => {
+  const handleClickExame = () => {
     const textField = document.getElementById("text-field");
-    const tamanhoDialogo = findVideo.dialogo.length;
+    const tamanhoDialogo = findExame.videoDialogo.length;
 
-    textField.innerHTML = findVideo.dialogo[indexDialogo];
+    textField.innerHTML = findExame.videoDialogo[indexDialogo];
 
     if (indexDialogo >= tamanhoDialogo) {
       textField.innerHTML = "Fim.";
@@ -28,10 +28,10 @@ export default function VideoPage() {
     <div className="container mx-auto flex w-screen gap-20 pt-20">
       <div className="grow">
         <div>
-          <h1 id="video-title">{findVideo.name}</h1>
+          <h1 id="exame-title">{findExame.name}</h1>
         </div>
 
-        <div id="video" className="relative h-[600px] border">
+        <div id="exame" className="relative h-[600px] border">
           <div id="personagem" className="absolute w-52">
             <div className="relative">
               <img
@@ -74,26 +74,26 @@ export default function VideoPage() {
 
           <p
             id="text-field"
-            className="absolute bottom-10 left-[50%] z-10 w-[90%] translate-x-[-50%] rounded-lg border bg-turquesa-100 px-5 py-5"
+            className="absolute bottom-1  0 left-[50%] z-10 w-[90%] translate-x-[-50%] rounded-lg border bg-turquesa-100 px-5 py-5"
           >
-            {findVideo.dialogo[0]}
+            {findExame.videoDialogo[0]}
           </p>
 
           <div
-            id="video-click"
+            id="exame-click"
             className="absolute z-20 h-full w-full cursor-pointer"
-            onClick={() => handleClickVideo()}
+            onClick={() => handleClickExame()}
           ></div>
         </div>
       </div>
 
       <div className="w-80 border px-5 py-3">
-        <h1 className="text-3xl font-bold">Outros videos</h1>
+        <h1 className="text-3xl font-bold">Outros exames</h1>
         <ul className="flex flex-col gap-5">
-          {videos.map((video) => (
-            <li key={video.id} className="cursor-pointer rounded-lg border">
-              <Link onClick={() => navigate(`/videos/${video.id}`)}>
-                <p className="text-lg font-semibold">{video.name}</p>
+          {exames.map((exame) => (
+            <li key={exame.id} className="cursor-pointer rounded-lg border">
+              <Link onClick={() => navigate(`/exames/${exame.id}`)}>
+                <p className="text-lg font-semibold">{exame.name}</p>
               </Link>
             </li>
           ))}
