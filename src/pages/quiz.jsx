@@ -45,8 +45,6 @@ export default function Quiz() {
 
   const checarResposta = () => {
     const resposta = event.target.id.slice(-1);
-    console.log(resposta);
-    console.log(pontuacao);
     if (resposta == findExame.quiz[indexQuiz].resposta) {
       console.log("acertou");
       pontuacao += 1;

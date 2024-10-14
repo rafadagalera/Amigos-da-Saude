@@ -9,7 +9,6 @@ export default function Personagem() {
   const salvarAvatar = () => {
     localStorage.setItem("avatar", JSON.stringify(avatar));
   };
-  console.log(avatar);
 
   return (
     <div className="container mx-auto pt-20 h-screen pb-10">
