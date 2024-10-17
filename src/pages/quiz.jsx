@@ -54,23 +54,24 @@ export default function Quiz() {
   };
 
   return (
-    <div className="container mx-auto flex pb-2 pt-20 md:pt-28">
-      <div className="flex w-full flex-col items-center justify-between gap-6 md:flex-row md:gap-20">
-        <div className="bg-amarelo-100 flex flex-col px-4 py-6">
-          <h2 className="text-[3rem] font-yanone font-bold">SUPER QUIZ</h2>
-          <p className="text-xl">
-            Aqui voce podera brincar no nosso quiz sobre os videos que voce
-            acabou de assitir.
-          </p>
+    <div className="flex pb-2 pt-20">
+      <div className="flex w-full flex-col gap-6 md:flex-col md:items-start md:gap-8">
+        <div className="w-full bg-amarelo-100 px-4 py-6">
+          <div className="container mx-auto flex flex-col">
+            <h2 className="font-yanone text-[3rem] font-bold">SUPER QUIZ</h2>
+            <p className="text-xl">
+              Aqui voce podera brincar no nosso quiz sobre os videos que voce
+              acabou de assitir.
+            </p>
+          </div>
         </div>
 
-        <div className="flex flex-col gap-4 px-4">
+        <div className="container mx-auto flex w-full flex-col gap-4 md:flex-row-reverse md:justify-between">
           <SearchVideos destino="quiz" />
 
           <div className="flex w-full grow flex-col gap-10 rounded-xl border px-4 py-5 md:px-10">
             <div className="border-b pb-2">
-              <h1 className="text-3xl font-bold">SUPER QUIZ</h1>
-              <h3 className="text-xl font-semibold">Tema: {findExame.name}</h3>
+              <h3 className="text-2xl font-semibold">Tema: {findExame.name}</h3>
             </div>
             <div className="flex flex-col gap-4">
               <h3 id="pergunta" className="text-2xl font-semibold md:text-3xl">
