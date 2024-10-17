@@ -5,7 +5,7 @@ export default function Header() {
     <header className="bg-turquesa-100 fixed top-0 z-10 h-20 w-screen">
       <div className="container mx-auto flex h-full items-center justify-between">
         <div>LOGO</div>
-        <nav className="flex gap-6">
+        <nav className="flex justify-around gap-6">
           <Link to="/">Home</Link>
           <Link to="/personagem">Personagem</Link>
           <Link to="/quiz/1">Quiz</Link>
