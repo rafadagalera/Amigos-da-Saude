@@ -11,9 +11,9 @@ export default function Personagem() {
   };
 
   return (
-    <div className="container mx-auto pt-20 h-screen pb-10">
-      <div className="border rounded-xl items-center flex justify-between h-full">
-        <div className="relative h-full w-96">
+    <div className="container mx-auto h-screen pt-20 md:pb-10">
+      <div className="flex h-full flex-col items-center justify-between rounded-xl border md:flex-row">
+        <div className="relative h-full w-40 md:w-96">
           <img className="absolute" src={avatarInfo.pele[avatar.pele]} alt="" />
           <img
             className="absolute"
