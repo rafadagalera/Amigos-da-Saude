@@ -92,7 +92,7 @@ export default function VideoPage() {
         <ul className="flex flex-col gap-5">
           {exames.map((exame) => (
             <li key={exame.id} className="cursor-pointer rounded-lg border">
-              <Link onClick={() => navigate(`/exames/${exame.id}`)}>
+              <Link onClick={() => navigate(`/videos/${exame.id}`)}>
                 <p className="text-lg font-semibold">{exame.name}</p>
               </Link>
             </li>
