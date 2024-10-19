@@ -1,18 +1,9 @@
 import { Link } from "react-router-dom";
 import { ExamesContext } from "../context/ExamesProvider";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 
 export default function Videos() {
-  const { exames } = useContext(ExamesContext);
-
-  const [filteredExames, setFilteredExames] = useState(exames);
-
-  const searchExames = () => {
-    const search = event.target.value.toLowerCase();
-    setFilteredExames(
-      exames.filter((exame) => exame.name.toLowerCase().includes(search)),
-    );
-  };
+  const { exames, searchExames, filteredExames } = useContext(ExamesContext);
 
   return (
     <div className="container mx-auto flex pt-20">
