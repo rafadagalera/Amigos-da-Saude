@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
 export const ExamesContext = createContext({});
 
@@ -74,7 +74,7 @@ export const ExamesProvider = ({ children }) => {
             alternativa4: "alternativa sangue 5",
           },
         },
-      ]
+      ],
     },
     {
       id: "2",
@@ -140,7 +140,7 @@ export const ExamesProvider = ({ children }) => {
             alternativa4: "alternativa tomo 5",
           },
         },
-      ]
+      ],
     },
     {
       id: "3",
@@ -202,12 +202,23 @@ export const ExamesProvider = ({ children }) => {
             alternativa4: "alternativa tivav tiva tiva",
           },
         },
-      ]
+      ],
     },
   ];
 
+  const searchExames = () => {
+    const search = event.target.value.toLowerCase();
+    setFilteredExames(
+      exames.filter((exame) => exame.name.toLowerCase().includes(search)),
+    );
+  };
+
+  const [filteredExames, setFilteredExames] = useState(exames);
+
   return (
-    <ExamesContext.Provider value={{ exames }}>
+    <ExamesContext.Provider
+      value={{ exames, searchExames, filteredExames, setFilteredExames }}
+    >
       {children}
     </ExamesContext.Provider>
   );

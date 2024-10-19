@@ -2,10 +2,11 @@ import { useContext } from "react";
 import { AvatarContext } from "../context/AvatarProvider";
 import { ExamesContext } from "../context/ExamesProvider";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import { SearchVideos } from "../components/serchVideos";
 
 export default function VideoPage() {
   const { avatar, avatarInfo } = useContext(AvatarContext);
-  const { exames } = useContext(ExamesContext);
+  const { exames, filteredExames, searchExames } = useContext(ExamesContext);
   const navigate = useNavigate();
 
   const { id } = useParams("id");
@@ -74,7 +75,7 @@ export default function VideoPage() {
 
           <p
             id="text-field"
-            className="absolute bottom-1  0 left-[50%] z-10 w-[90%] translate-x-[-50%] rounded-lg border bg-turquesa-100 px-5 py-5"
+            className="0 absolute bottom-1 left-[50%] z-10 w-[90%] translate-x-[-50%] rounded-lg border bg-turquesa-100 px-5 py-5"
           >
             {findExame.videoDialogo[0]}
           </p>
@@ -86,19 +87,8 @@ export default function VideoPage() {
           ></div>
         </div>
       </div>
-
-      <div className="w-80 border px-5 py-3">
-        <h1 className="text-3xl font-bold">Outros exames</h1>
-        <ul className="flex flex-col gap-5">
-          {exames.map((exame) => (
-            <li key={exame.id} className="cursor-pointer rounded-lg border">
-              <Link onClick={() => navigate(`/videos/${exame.id}`)}>
-                <p className="text-lg font-semibold">{exame.name}</p>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
+    
+      <SearchVideos destino="videos" />
     </div>
   );
 }

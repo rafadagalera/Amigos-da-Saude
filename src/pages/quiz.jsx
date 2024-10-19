@@ -1,9 +1,10 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ExamesContext } from "../context/ExamesProvider";
+import { SearchVideos } from "../components/serchVideos";
 
 export default function Quiz() {
-  const { exames } = useContext(ExamesContext);
+  const { exames, searchExames, filteredExames } = useContext(ExamesContext);
   const navigate = useNavigate();
 
   const { id } = useParams("id");
@@ -97,18 +98,7 @@ export default function Quiz() {
           </div>
         </div>
 
-        <div className="w-80 border px-5 py-3">
-          <h1 className="text-3xl font-bold">Outros videos</h1>
-          <ul className="flex flex-col gap-5">
-            {exames.map((quiz) => (
-              <li key={quiz.id} className="cursor-pointer rounded-lg border">
-                <Link onClick={() => navigate(`/quiz/${quiz.id}`)}>
-                  <p className="text-lg font-semibold">{quiz.name}</p>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <SearchVideos destino="quiz"/> 
       </div>
     </div>
   );
