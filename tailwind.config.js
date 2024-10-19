@@ -17,6 +17,7 @@ export default {
       'verde-300': '#55A26A',
       'verde-400': '#008A5F',
       'verde-500': '#00715E',
+      'lime-50': '#f7fee7',
       'lime-100': '#C6CF84',
       'lime-200': '#90B970',
       'turquesa-100': '#00C3B3',
@@ -25,6 +26,9 @@ export default {
       'azul-300': '#006AC3',
       'amarelo-100': '#F9E5A0',
       'azul-900': '#0A2144;',
+      'ciano-800': '#0891b2;',
+      'ciano-900': '#0c4a6e;',
+      'ciano-950': '#082f49;',
     },
     backgroundImage: {
       'vetor1': "url('/src/assets/vetor-home-1.svg')",
