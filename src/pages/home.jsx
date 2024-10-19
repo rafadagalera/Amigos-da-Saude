@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <div className="pt-20">
-      <div className="container mx-auto flex flex-wrap justify-between gap-20 pt-10">
+      <div className="h-[32rem] bg-banner bg-cover bg-center"></div>
+
+      <div className="container mx-auto flex flex-wrap justify-between gap-20 pt-24">
         <div className="flex grow rounded-[4.5rem] border-2 border-azul-100 px-5 py-10">
           <nav className="flex flex-col gap-5">
             <Link>Criar Personagem</Link>
