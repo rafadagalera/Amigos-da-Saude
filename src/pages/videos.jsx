@@ -8,8 +8,8 @@ export default function Videos() {
   const { exames } = useContext(ExamesContext);
 
   return (
-    <div className="flex- container mx-auto px-4 pt-28 pb-6">
-      <SearchVideos destino="videos" />
+    <div className="container mx-auto flex px-4 pb-6 pt-28">
+      <SearchVideos destino="videos" className="" />
 
       <ul className="mt-3 flex w-screen flex-col items-center justify-center gap-24 pt-3 md:flex-row">
         {exames.map((exame) => (
@@ -21,9 +21,9 @@ export default function Videos() {
               <img
                 src={imagem}
                 alt=""
-                className="h-full rounded-t-lg object-cover"
+                className="h-full rounded-lg object-cover"
               />
-              <h2 className="hover:bg-cinza-200 bg-branco-200 flex items-center justify-center py-4 text-center font-nunito text-lg font-medium uppercase active:bg-lime-200">
+              <h2 className="bg-azul-claro-100 flex items-center justify-center py-4 text-center font-nunito text-lg font-medium uppercase active:bg-lime-200">
                 {exame.name}
               </h2>
             </Link>

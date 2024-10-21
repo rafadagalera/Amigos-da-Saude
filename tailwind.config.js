@@ -22,6 +22,7 @@ export default {
       'lime-100': '#C6CF84',
       'lime-200': '#90B970',
       'turquesa-100': '#00C3B3',
+      'azul-claro-100': '#C5E3EE88',
       'azul-100': '#00A7C1',
       'azul-200': '#008AC8',
       'azul-300': '#006AC3',
@@ -30,7 +31,7 @@ export default {
       'cinza-200': '#C0D6C0;',
       'ciano-900': '#0c4a6e;',
       'ciano-950': '#082f49;',
-      'branco-200': '#e2e8f0;',
+      'branco-200': '#E5E5E5FF;',
       
     },
     backgroundImage: {
