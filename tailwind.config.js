@@ -26,9 +26,11 @@ export default {
       'azul-300': '#006AC3',
       'amarelo-100': '#F9E5A0',
       'azul-900': '#0A2144;',
-      'ciano-800': '#0891b2;',
+      'cinza-200': '#C0D6C0;',
       'ciano-900': '#0c4a6e;',
       'ciano-950': '#082f49;',
+      'branco-200': '#e2e8f0;',
+      
     },
     backgroundImage: {
       'vetor1': "url('/src/assets/vetor-home-1.svg')",
