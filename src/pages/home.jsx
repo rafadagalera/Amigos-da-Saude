@@ -5,16 +5,9 @@ export default function Home() {
     <div className="pt-20">
       <div className="bg-banner-mobile h-[20rem] bg-contain bg-top bg-no-repeat md:h-[32rem] md:bg-banner md:bg-cover"></div>
 
-      <div className="container mx-auto flex flex-wrap justify-between gap-20 pt-24">
-        <div className="flex grow rounded-[4.5rem] border-2 border-azul-100 px-5 py-10">
-          <nav className="flex flex-col gap-5">
-            <Link>Criar Personagem</Link>
-            <Link>Meus Videos</Link>
-            <Link className="">Quiz Educativo</Link>
-          </nav>
-        </div>
+      <div className="container mx-auto flex flex-wrap justify-between gap-20 pt-16">
 
-        <div className="w-full px-4 text-azul-900 md:w-[60%]">
+        <div className="w-full pb-10 px-4 text-azul-900 md:w-[60%]">
           <h1 className="font-yanone text-[4rem]">Bem-Vindo!</h1>
           <div className="flex flex-col gap-5 font-nunito text-[1.3rem] md:text-[2rem]">
             <p>
