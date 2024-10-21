@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ExamesContext } from "../context/ExamesProvider";
 import { SearchVideos } from "../components/serchVideos";
@@ -13,7 +13,40 @@ export default function Quiz() {
   let indexQuiz = 0;
   let pontuacao = 0;
 
+  const setQuiz = () => {
+    const perguntaIndex = document.querySelector("#pergunta-index");
+    const pergunta = document.querySelector("#pergunta");
+    const alternativa1 = document.querySelector("#alternativa1");
+    const alternativa2 = document.querySelector("#alternativa2");
+    const alternativa3 = document.querySelector("#alternativa3");
+    const alternativa4 = document.querySelector("#alternativa4");
+
+    perguntaIndex.classList.remove("hidden");
+
+    alternativa1.classList.remove("hidden");
+    alternativa2.classList.remove("hidden");
+    alternativa3.classList.remove("hidden");
+    alternativa4.classList.remove("hidden");
+
+    perguntaIndex.innerHTML = `PERGUNTA ${indexQuiz + 1}:`;
+    pergunta.innerHTML = findExame.quiz[indexQuiz].pergunta;
+
+    alternativa1.innerHTML =
+      findExame.quiz[indexQuiz].alternativas.alternativa1;
+    alternativa2.innerHTML =
+      findExame.quiz[indexQuiz].alternativas.alternativa2;
+    alternativa3.innerHTML =
+      findExame.quiz[indexQuiz].alternativas.alternativa3;
+    alternativa4.innerHTML =
+      findExame.quiz[indexQuiz].alternativas.alternativa4;
+  };
+
+  useEffect(() => {
+    setQuiz();
+  });
+
   const handleQuiz = () => {
+    const perguntaIndex = document.querySelector("#pergunta-index");
     const pergunta = document.querySelector("#pergunta");
     const alternativa1 = document.querySelector("#alternativa1");
     const alternativa2 = document.querySelector("#alternativa2");
@@ -25,6 +58,7 @@ export default function Quiz() {
       console.log(pontuacao);
 
       pergunta.innerHTML = `Acabou, sua pontuação foi: ${pontuacao}`;
+
       alternativa1.classList.add("hidden");
       alternativa2.classList.add("hidden");
       alternativa3.classList.add("hidden");
@@ -33,6 +67,8 @@ export default function Quiz() {
     }
 
     pergunta.innerHTML = findExame.quiz[indexQuiz].pergunta;
+    perguntaIndex.innerHTML = `PERGUNTA ${indexQuiz + 1}:`;
+
     alternativa1.innerHTML =
       findExame.quiz[indexQuiz].alternativas.alternativa1;
     alternativa2.innerHTML =
@@ -54,10 +90,10 @@ export default function Quiz() {
   };
 
   return (
-    <div className="flex pb-2 pt-20">
-      <div className="flex w-full flex-col gap-6 md:flex-col md:items-start md:gap-8">
-        <div className="w-full bg-amarelo-100 px-4 py-6">
-          <div className="container mx-auto flex flex-col">
+    <div className="flex pb-4 pt-20">
+      <div className="flex w-full flex-col gap-6 md:gap-8">
+        <div className="w-full bg-amarelo-100">
+          <div className="container mx-auto flex flex-col px-4 py-6">
             <h2 className="font-yanone text-[3rem] font-bold">SUPER QUIZ</h2>
             <p className="text-xl">
               Aqui voce podera brincar no nosso quiz sobre os videos que voce
@@ -66,17 +102,25 @@ export default function Quiz() {
           </div>
         </div>
 
-        <div className="container mx-auto flex w-full flex-col gap-4 md:flex-row-reverse md:justify-between">
+        <div className="container mx-auto flex w-full flex-col gap-4 px-4 md:flex-row-reverse md:justify-between">
           <SearchVideos destino="quiz" />
 
-          <div className="flex w-full grow flex-col gap-10 rounded-xl border px-4 py-5 md:px-10">
-            <div className="border-b pb-2">
+          <div className="flex w-full grow flex-col gap-5 rounded-xl border px-4 py-6 md:px-10">
+            <div className="border-b pb-4">
               <h3 className="text-2xl font-semibold">Tema: {findExame.name}</h3>
             </div>
             <div className="flex flex-col gap-4">
-              <h3 id="pergunta" className="text-2xl font-semibold md:text-3xl">
-                {findExame.quiz[0].pergunta}
-              </h3>
+              <div>
+                <h3 id="pergunta-index" className="text-3xl font-bold">
+                  PERGUNTA {indexQuiz + 1}:
+                </h3>
+                <h3
+                  id="pergunta"
+                  className="text-2xl font-semibold md:text-3xl"
+                >
+                  {findExame.quiz[0].pergunta}
+                </h3>
+              </div>
 
               <div className="flex flex-col gap-4">
                 <p
