@@ -9,16 +9,27 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 z-10 h-20 w-screen bg-turquesa-100">
-      <div className="container relative flex h-full items-center justify-between px-2 md:mx-auto">
+      <div className="container relative mx-auto flex h-full items-center justify-between px-4">
         <div>LOGO</div>
 
         <Bars3Icon className="size-6 md:hidden" onClick={handleMenu} />
-        <div id="menu_mobile" className="absolute bottom-0 right-0 translate-y-[100%] hidden md:hidden">
+        <div
+          id="menu_mobile"
+          className="absolute bottom-0 right-0 hidden translate-y-[100%] md:hidden"
+        >
           <nav className="flex flex-col gap-5">
-            <Link to="/" onClick={handleMenu}>HOME</Link>
-            <Link to="/personagem" onClick={handleMenu}>PERSONAGEM</Link>
-            <Link to="/quiz/1" onClick={handleMenu}>QUIZ</Link>
-            <Link to="/videos" onClick={handleMenu}>VIDEOS</Link>
+            <Link to="/" onClick={handleMenu}>
+              HOME
+            </Link>
+            <Link to="/personagem" onClick={handleMenu}>
+              PERSONAGEM
+            </Link>
+            <Link to="/quiz/1" onClick={handleMenu}>
+              QUIZ
+            </Link>
+            <Link to="/videos" onClick={handleMenu}>
+              VIDEOS
+            </Link>
           </nav>
         </div>
 
