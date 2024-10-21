@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <div className="pt-20">
-      <div className="h-[32rem] bg-banner bg-cover bg-center"></div>
+      <div className="bg-banner-mobile h-[20rem] bg-contain bg-top bg-no-repeat md:h-[32rem] md:bg-banner md:bg-cover"></div>
 
       <div className="container mx-auto flex flex-wrap justify-between gap-20 pt-24">
         <div className="flex grow rounded-[4.5rem] border-2 border-azul-100 px-5 py-10">
@@ -67,8 +67,8 @@ export default function Home() {
         </div>
 
         <div className="absolute top-[54rem] flex h-auto w-full flex-col justify-end bg-vetor3 bg-contain bg-right bg-no-repeat md:top-[54rem] md:h-[43rem] md:flex-row">
-          <div className="px-4 mt-8 w-full md:mt-56 md:w-[46.25rem]">
-            <h3 className="font-yanone text-end md:text-start mr-3 text-2xl font-bold text-azul-900 md:text-[2.8125rem]">
+          <div className="mt-8 w-full px-4 md:mt-56 md:w-[46.25rem]">
+            <h3 className="mr-3 text-end font-yanone text-2xl font-bold text-azul-900 md:text-start md:text-[2.8125rem]">
               Assista A Videos Educativos
             </h3>
             <p className="mt-5 text-left font-open-sans text-base font-normal leading-normal md:text-[1.6rem]">
