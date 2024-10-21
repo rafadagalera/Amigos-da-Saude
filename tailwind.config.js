@@ -38,6 +38,8 @@ export default {
       'vetor2': "url('/src/assets/vetor-home-2.svg')",
       'vetor3': "url('/src/assets/vetor-home-3.svg')",
       'banner': "url('/src/assets/banner-home.png')",
+      'banner': "url('/src/assets/banner-home.png')",
+      'banner-mobile': "url('/src/assets/banner-home-mobile.png')",
     },
   },
   plugins: [],
