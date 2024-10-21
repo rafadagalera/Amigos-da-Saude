@@ -12,9 +12,9 @@ export default function Personagem() {
   };
 
   return (
-    <div className="container mx-auto px-4 pb-4 pt-28 md:pb-10">
-      <div className="flex h-full justify-center md:justify-between">
-        <div className="flex h-[32rem] flex-col items-center rounded-3xl border-2 border-azul-100 px-4 py-6 md:h-[39rem] md:px-16">
+    <div className="container mx-auto pb-4 pt-20 md:pb-10 md:pt-28">
+      <div className="flex h-full gap-5 flex-col-reverse justify-center md:flex-row md:justify-between">
+        <div className="flex h-[32rem] mx-4 flex-col items-center rounded-3xl border-2 border-azul-100 px-4 py-6 md:h-[39rem] md:px-16">
           <div className="absolute">
             <div className="relative h-full w-40 md:w-[13rem]">
               <img
@@ -88,8 +88,8 @@ export default function Personagem() {
           </div>
         </div>
 
-        <div className="hidden w-[38rem] flex-col gap-5 rounded-xl border bg-amarelo-100 px-6 py-4 md:flex">
-          <h1 className="text-end font-yanone text-lg font-semibold md:text-3xl">
+        <div className="w-full flex-col gap-5 bg-amarelo-100 px-6 py-4 md:flex md:w-[38rem] md:rounded-xl md:border">
+          <h1 className="text-end font-yanone text-2xl font-semibold md:text-3xl">
             Crie seu personagem do jeitinho que voce quiser!
           </h1>
 

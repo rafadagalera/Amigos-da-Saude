@@ -12,6 +12,7 @@ export default {
       'open-sans': ['"Open Sans"', 'sans-serif'],
     },
     colors: {
+      'branco': '#F7F7F7',
       'verde-100': '#B2F2A3',
       'verde-200': '#5DDCA7',
       'verde-300': '#55A26A',
