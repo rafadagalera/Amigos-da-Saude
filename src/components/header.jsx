@@ -13,11 +13,12 @@ export default function Header() {
         <div>LOGO</div>
 
         <Bars3Icon className="size-6 md:hidden" onClick={handleMenu} />
-        <div id="menu_mobile" className="absolute bottom-0 right-0 translate-y-[100%] hidden">
+        <div id="menu_mobile" className="absolute bottom-0 right-0 translate-y-[100%] hidden md:hidden">
           <nav className="flex flex-col gap-5">
-            <Link to="/">HOME</Link>
-            <Link to="/personagem">PERSONAGEM</Link>
-            <Link to="/quiz/1">QUIZ</Link>
+            <Link to="/" onClick={handleMenu}>HOME</Link>
+            <Link to="/personagem" onClick={handleMenu}>PERSONAGEM</Link>
+            <Link to="/quiz/1" onClick={handleMenu}>QUIZ</Link>
+            <Link to="/videos" onClick={handleMenu}>VIDEOS</Link>
           </nav>
         </div>
 

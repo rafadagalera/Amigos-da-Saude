@@ -1,11 +1,10 @@
-import { useContext, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useContext } from "react";
+import { useParams } from "react-router-dom";
 import { ExamesContext } from "../context/ExamesProvider";
 import { SearchVideos } from "../components/serchVideos";
 
 export default function Quiz() {
-  const { exames, searchExames, filteredExames } = useContext(ExamesContext);
-  const navigate = useNavigate();
+  const { exames } = useContext(ExamesContext);
 
   const { id } = useParams("id");
   const findExame = exames.find((quiz) => quiz.id == id);
@@ -26,10 +25,10 @@ export default function Quiz() {
       console.log(pontuacao);
 
       pergunta.innerHTML = `Acabou, sua pontuação foi: ${pontuacao}`;
-      alternativa1.innerHTML = "";
-      alternativa2.innerHTML = "";
-      alternativa3.innerHTML = "";
-      alternativa4.innerHTML = "";
+      alternativa1.classList.add("hidden")
+      alternativa2.classList.add("hidden")
+      alternativa3.classList.add("hidden")
+      alternativa4.classList.add("hidden")
       return;
     }
 
@@ -55,42 +54,44 @@ export default function Quiz() {
   };
 
   return (
-    <div className="container mx-auto flex pt-20">
-      <div className="flex w-full justify-between gap-20">
+    <div className="container mx-auto flex px-4 pt-28 pb-2">
+      <div className="flex w-full flex-col items-center md:flex-row justify-between grow gap-10 md:gap-20">
         <div className="flex grow flex-col gap-10 rounded-xl border px-10 py-5">
           <div>
-            <h1>Quiz</h1>
-            <h3>Tema: {findExame.name}</h3>
+            <h1 className="text-3xl font-bold">SUPER QUIZ</h1>
+            <h3 className="text-xl font-semibold">Tema: {findExame.name}</h3>
           </div>
-          <div>
-            <h3 id="pergunta">{findExame.quiz[0].pergunta}</h3>
-
-            <div>
+          <div className="flex flex-col gap-4">
+            <h3 id="pergunta" className="text-3xl font-semibold">
+              {findExame.quiz[0].pergunta}
+            </h3>
+            
+            <div className="flex flex-col gap-4">
               <p
                 id="alternativa1"
                 onClick={() => checarResposta()}
-                className="cursor-pointer hover:bg-lime-100"
+                className="cursor-pointer text-lg px-2 py-1 hover:bg-lime-50 border rounded-lg"
               >
                 {findExame.quiz[0].alternativas.alternativa1}
               </p>
               <p
                 id="alternativa2"
                 onClick={() => checarResposta()}
-                className="cursor-pointer hover:bg-lime-100"
+                className="cursor-pointer text-lg px-2 py-1 hover:bg-lime-50 border rounded-lg"
               >
                 {findExame.quiz[0].alternativas.alternativa2}
               </p>
               <p
                 id="alternativa3"
                 onClick={() => checarResposta()}
-                className="cursor-pointer hover:bg-lime-100"
+                className="cursor-pointer text-lg px-2 py-1 hover:bg-lime-50 border rounded-lg"
               >
                 {findExame.quiz[0].alternativas.alternativa3}
               </p>
               <p
                 id="alternativa4"
                 onClick={() => checarResposta()}
-                className="cursor-pointer hover:bg-lime-100"
+                className="cursor-pointer text-lg px-2 py-1 hover:bg-lime-50 border rounded-lg"
               >
                 {findExame.quiz[0].alternativas.alternativa4}
               </p>
@@ -98,7 +99,7 @@ export default function Quiz() {
           </div>
         </div>
 
-        <SearchVideos destino="quiz"/> 
+        <SearchVideos destino="quiz" />
       </div>
     </div>
   );
