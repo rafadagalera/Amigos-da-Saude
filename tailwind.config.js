@@ -10,6 +10,7 @@ export default {
       'yanone': ['"Yanone Kaffeesatz"', 'sans-serif'],
       'nunito': ['"Nunito"', 'sans-serif'],
       'open-sans': ['"Open Sans"', 'sans-serif'],
+      'poppins': ['"Poppins"', 'sans-serif'],
     },
     colors: {
       'branco': '#F7F7F7',
