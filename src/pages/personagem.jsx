@@ -1,7 +1,7 @@
-import { useContext } from "react";
-import { AvatarContext } from "../context/AvatarProvider";
-import { Link } from "react-router-dom";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { AvatarContext } from "../context/AvatarProvider";
 
 export default function Personagem() {
   const { avatar, avatarInfo, trocarProximo, trocarAnterior } =
@@ -90,27 +90,27 @@ export default function Personagem() {
           </div>
         </div>
 
+
         <div className="w-full flex-col gap-5 bg-amarelo-100 px-6 py-4 md:flex md:w-[50rem] md:rounded-xl md:border">
           <h1 className="text-end font-yanone text-2xl font-semibold md:text-3xl">
+
             Crie seu personagem do jeitinho que voce quiser!
           </h1>
 
           <div className="flex flex-col gap-8 font-nunito">
             <p className="text-lg md:text-2xl">
-              Aqui voce podera criar seu personagem do jeitinho que voce quiser.
+              Aqui você pode criar seu próprio personagem!
             </p>
 
             <p className="text-lg md:text-2xl">
-              Seu personagem será seu companheiro nessa aventura, ele ira
-              participar de videos interativos onde voce ira aprender mais sobre
-              os exames que voce ira fazer aqui no hospital e juntos vocês irão
-              aprender muito!
+              Ele será seu amigo na aventura e vai te ajudar a aprender sobre os
+              exames que você fará no hospital. Vocês assistirão a vídeos
+              interativos juntos e vão aprender muitas coisas legais!
             </p>
 
             <p className="text-lg md:text-2xl">
-              Clique nas setas para escolher entre as opções de customização e
-              quando sentir que está pronto(a), clique no botão para salvar seu
-              personagem!
+              Use as setas para personalizar seu personagem e, quando estiver
+              pronto, clique no botão para salvar. Divirta-se!
             </p>
           </div>
         </div>

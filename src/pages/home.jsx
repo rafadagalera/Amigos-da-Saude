@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <div className="pt-20">
-      <div className="bg-banner-mobile h-[20rem] bg-contain bg-top bg-no-repeat md:h-[32rem] md:bg-banner md:bg-cover"></div>
+      <div className="bg-banner-mobile h-[20rem] bg-contain bg-top bg-no-repeat sm:h-[32rem] md:bg-banner md:bg-cover"></div>
 
       <div className="container mx-auto flex flex-wrap justify-between gap-20 pt-16">
 
