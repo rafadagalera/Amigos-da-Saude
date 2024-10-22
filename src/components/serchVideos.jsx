@@ -24,11 +24,11 @@ export const SearchVideos = ({ destino }) => {
         </div>
       </div>
 
-      <ul className="flex flex-col gap-6 h-40 overflow-y-auto">
+      <ul className="flex flex-col gap-6 h-40 md:h-full overflow-y-auto">
         {filteredExames.map((quiz) => (
           <li
             key={quiz.id}
-            className="hover:bg-lime-50 min-h-[50%] cursor-pointer rounded-lg border"
+            className="hover:bg-lime-50 min-h-[50%] md:min-h-[35%] cursor-pointer rounded-lg border"
             onClick={() => navigate(`/${destino}/${quiz.id}`)}
           >
             <p className="px-3 py-2 text-lg font-semibold">{quiz.name}</p>
