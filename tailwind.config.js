@@ -10,6 +10,7 @@ export default {
       'yanone': ['"Yanone Kaffeesatz"', 'sans-serif'],
       'nunito': ['"Nunito"', 'sans-serif'],
       'open-sans': ['"Open Sans"', 'sans-serif'],
+      'poppins': ['"Poppins"', 'sans-serif'],
     },
     colors: {
       'branco': '#F7F7F7',
@@ -18,6 +19,7 @@ export default {
       'verde-300': '#55A26A',
       'verde-400': '#008A5F',
       'verde-500': '#00715E',
+      'verde-600': '#6EDBA7',
       'lime-50': '#f7fee7',
       'lime-100': '#C6CF84',
       'lime-200': '#90B970',
