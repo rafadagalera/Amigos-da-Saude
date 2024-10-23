@@ -105,22 +105,27 @@ export default function Quiz() {
         <div className="container mx-auto flex w-full flex-col gap-4 px-4 md:flex-row md:justify-between xl:gap-10">
           <div className="flex w-full grow flex-col gap-5 rounded-xl border px-4 py-6 md:px-10">
             <div className="border-b pb-4">
-              <h3 className="text-2xl font-semibold">Tema: {findExame.name}</h3>
+              <h3 className="text-center font-nunito text-2xl font-semibold">
+                Tema: {findExame.name}
+              </h3>
             </div>
             <div className="mt-6 flex flex-col gap-4">
-              <div>
-                <h3 id="pergunta-index" className="text-3xl font-bold">
+              <div className="flex flex-col gap-4">
+                <h3
+                  id="pergunta-index"
+                  className="font-poppins text-4xl font-bold"
+                >
                   PERGUNTA {indexQuiz + 1}:
                 </h3>
                 <h3
                   id="pergunta"
-                  className="text-2xl font-semibold md:text-3xl"
+                  className="font-nunito text-xl font-semibold md:text-3xl"
                 >
                   {findExame.quiz[0].pergunta}
                 </h3>
               </div>
 
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-4 mt-5">
                 <p
                   id="alternativa1"
                   onClick={() => checarResposta()}

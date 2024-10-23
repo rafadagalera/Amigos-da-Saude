@@ -15,7 +15,7 @@ export default function Header() {
         <Bars3Icon className="size-6 md:hidden" onClick={handleMenu} />
         <div
           id="menu_mobile"
-          className="absolute bottom-0 right-0 hidden translate-y-[100%] md:hidden"
+          className="absolute bottom-0 right-0 hidden translate-y-[100%] rounded-b-lg bg-azul-100 px-6 py-4 text-lg font-medium opacity-95 md:hidden"
         >
           <nav className="flex flex-col gap-5">
             <Link to="/" onClick={handleMenu}>
