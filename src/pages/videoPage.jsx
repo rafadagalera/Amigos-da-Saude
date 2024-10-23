@@ -1,13 +1,12 @@
 import { useContext } from "react";
 import { AvatarContext } from "../context/AvatarProvider";
 import { ExamesContext } from "../context/ExamesProvider";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { SearchVideos } from "../components/serchVideos";
 
 export default function VideoPage() {
   const { avatar, avatarInfo } = useContext(AvatarContext);
-  const { exames, filteredExames, searchExames } = useContext(ExamesContext);
-  const navigate = useNavigate();
+  const { exames } = useContext(ExamesContext);
 
   const { id } = useParams("id");
   const findExame = exames.find((exame) => exame.id == id);
@@ -87,8 +86,10 @@ export default function VideoPage() {
           ></div>
         </div>
       </div>
-    
-      <SearchVideos destino="videos" />
+
+      <div className="absolute top-0 w-full px-4 md:static md:h-full md:w-[25rem]">
+        <SearchVideos destino="videos" />
+      </div>
     </div>
   );
 }
