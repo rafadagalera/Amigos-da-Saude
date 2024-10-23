@@ -86,8 +86,10 @@ export default function VideoPage() {
           ></div>
         </div>
       </div>
-    
-      <SearchVideos destino="videos" />
+
+      <div className="absolute top-0 w-full px-4 md:static md:h-full md:w-[25rem]">
+        <SearchVideos destino="videos" />
+      </div>
     </div>
   );
 }

@@ -102,9 +102,7 @@ export default function Quiz() {
           </div>
         </div>
 
-        <div className="container mx-auto flex w-full flex-col gap-4 px-4 md:flex-row-reverse md:justify-between xl:gap-10">
-          <SearchVideos destino="quiz" />
-
+        <div className="container mx-auto flex w-full flex-col gap-4 px-4 md:flex-row md:justify-between xl:gap-10">
           <div className="flex w-full grow flex-col gap-5 rounded-xl border px-4 py-6 md:px-10">
             <div className="border-b pb-4">
               <h3 className="text-2xl font-semibold">Tema: {findExame.name}</h3>
@@ -126,33 +124,37 @@ export default function Quiz() {
                 <p
                   id="alternativa1"
                   onClick={() => checarResposta()}
-                  className="hover:bg-lime-50 cursor-pointer rounded-lg border px-3 py-5 text-lg md:p-3"
+                  className="cursor-pointer rounded-lg border px-3 py-5 text-lg hover:bg-lime-50 md:p-3"
                 >
                   {findExame.quiz[0].alternativas.alternativa1}
                 </p>
                 <p
                   id="alternativa2"
                   onClick={() => checarResposta()}
-                  className="hover:bg-lime-50 cursor-pointer rounded-lg border px-3 py-5 text-lg md:p-3"
+                  className="cursor-pointer rounded-lg border px-3 py-5 text-lg hover:bg-lime-50 md:p-3"
                 >
                   {findExame.quiz[0].alternativas.alternativa2}
                 </p>
                 <p
                   id="alternativa3"
                   onClick={() => checarResposta()}
-                  className="hover:bg-lime-50 cursor-pointer rounded-lg border px-3 py-5 text-lg md:p-3"
+                  className="cursor-pointer rounded-lg border px-3 py-5 text-lg hover:bg-lime-50 md:p-3"
                 >
                   {findExame.quiz[0].alternativas.alternativa3}
                 </p>
                 <p
                   id="alternativa4"
                   onClick={() => checarResposta()}
-                  className="hover:bg-lime-50 cursor-pointer rounded-lg border px-3 py-5 text-lg md:p-3"
+                  className="cursor-pointer rounded-lg border px-3 py-5 text-lg hover:bg-lime-50 md:p-3"
                 >
                   {findExame.quiz[0].alternativas.alternativa4}
                 </p>
               </div>
             </div>
+          </div>
+
+          <div className="w-full md:h-full md:w-[25rem]">
+            <SearchVideos destino="videos" />
           </div>
         </div>
       </div>
