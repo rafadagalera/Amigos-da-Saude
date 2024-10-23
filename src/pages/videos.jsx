@@ -8,28 +8,32 @@ export default function Videos() {
   const { exames } = useContext(ExamesContext);
 
   return (
-    <div className="container mx-auto flex px-4 pb-6 pt-28">
-      <SearchVideos destino="videos" className="" />
+    <div className="container mx-auto flex min-h-screen pb-6 pt-28 md:pt-36">
+      <div className="relative flex w-full flex-col gap-20 pt-80 md:pt-0 lg:flex-row">
+        <div className="absolute top-0 w-full px-4 md:static md:h-full lg:w-[25rem]">
+          <SearchVideos destino="videos" />
+        </div>
 
-      <ul className="mt-3 flex w-screen flex-col items-center justify-center gap-24 pt-3 md:flex-row">
-        {exames.map((exame) => (
-          <li key={exame.id} className="h-64 w-60 cursor-pointer rounded-xl">
-            <Link
-              to={exame.id}
-              className="flex h-full flex-col transition hover:scale-110"
+        <ul className="grid w-full auto-rows-min grid-cols-1 justify-center gap-x-16 gap-y-14 md:grid-cols-[repeat(auto-fill,_250px)]">
+          {exames.map((exame) => (
+            <li
+              key={exame.id}
+              className="h-64 w-full cursor-pointer justify-self-center transition hover:scale-110 md:w-60"
             >
-              <img
-                src={imagem}
-                alt=""
-                className="h-full rounded-lg object-cover"
-              />
-              <h2 className="bg-azul-claro-100 flex items-center justify-center py-4 text-center font-nunito text-lg font-medium uppercase active:bg-lime-200">
-                {exame.name}
-              </h2>
-            </Link>
-          </li>
-        ))}
-      </ul>
+              <Link to={exame.id} className="flex h-full flex-col">
+                <img
+                  src={imagem}
+                  alt=""
+                  className="h-full object-cover md:rounded-t-2xl"
+                />
+                <h2 className="flex items-center justify-center bg-azul-claro-100 py-4 text-center font-nunito text-lg font-medium uppercase active:bg-lime-200 md:rounded-b-2xl">
+                  {exame.name}
+                </h2>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

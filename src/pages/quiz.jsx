@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { ExamesContext } from "../context/ExamesProvider";
 import { SearchVideos } from "../components/serchVideos";
@@ -102,10 +102,8 @@ export default function Quiz() {
           </div>
         </div>
 
-        <div className="container mx-auto flex w-full flex-col gap-4 px-4 md:flex-row-reverse md:justify-between xl:gap-10">
-          <SearchVideos destino="quiz" />
-
-          <div className="flex w-full grow flex-col gap-5 rounded-xl border px-4 pt-6 md:px-10 pb-10 ">
+        <div className="container mx-auto flex w-full flex-col gap-4 px-4 md:flex-row md:justify-between xl:gap-10">
+          <div className="flex w-full grow flex-col gap-5 rounded-xl border px-4 py-6 md:px-10">
             <div className="border-b pb-4">
               <h3 className="text-center font-nunito text-2xl font-semibold">
                 Tema: {findExame.name}
@@ -158,6 +156,10 @@ export default function Quiz() {
                 </p>
               </div>
             </div>
+          </div>
+
+          <div className="w-full md:h-full md:w-[25rem]">
+            <SearchVideos destino="videos" />
           </div>
         </div>
       </div>
