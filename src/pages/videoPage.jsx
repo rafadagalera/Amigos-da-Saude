@@ -25,14 +25,19 @@ export default function VideoPage() {
   };
 
   return (
-    <div className="container mx-auto flex w-screen gap-20 pt-20">
-      <div className="grow">
-        <div>
-          <h1 id="exame-title">{findExame.name}</h1>
-        </div>
+    <div className="flex w-full flex-col pt-20">
+      <div className=" bg-amarelo-100 p-2">
+        <h1 id="exame-title" className="font-yanone py-3 text-3xl container mx-auto">
+          Tema: {findExame.name}
+        </h1>
+      </div>
 
-        <div id="exame" className="relative h-[600px] border">
-          <div id="personagem" className="absolute w-52">
+      <div className="container mx-auto grow">
+        <div
+          id="exame"
+          className="relative h-[500px] gap-4 pt-3 sm:border md:h-[600px]"
+        >
+          <div id="personagem" className="absolute w-36 md:w-52">
             <div className="relative">
               <img
                 className="absolute"
@@ -52,7 +57,7 @@ export default function VideoPage() {
             </div>
           </div>
 
-          <div id="medico" className="absolute right-0 w-52">
+          <div id="medico" className="absolute right-0 w-36 md:w-52">
             <div className="relative">
               <img
                 src={avatarInfo.pele[avatar.pele]}
@@ -74,7 +79,7 @@ export default function VideoPage() {
 
           <p
             id="text-field"
-            className="0 absolute bottom-1 left-[50%] z-10 w-[90%] translate-x-[-50%] rounded-lg border bg-turquesa-100 px-5 py-5"
+            className="0 absolute bottom-1 left-[50%] z-10 w-[90%] translate-x-[-50%] rounded-lg border bg-amarelo-100 px-5 py-5 font-poppins text-xl"
           >
             {findExame.videoDialogo[0]}
           </p>
@@ -85,10 +90,10 @@ export default function VideoPage() {
             onClick={() => handleClickExame()}
           ></div>
         </div>
-      </div>
 
-      <div className="absolute top-0 w-full px-4 md:static md:h-full md:w-[25rem]">
-        <SearchVideos destino="videos" />
+        <div className="mb-6 h-[20rem] w-full sm:pt-5 md:h-full lg:w-[25rem]">
+          <SearchVideos destino="videos" />
+        </div>
       </div>
     </div>
   );

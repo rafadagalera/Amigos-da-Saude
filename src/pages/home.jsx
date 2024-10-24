@@ -28,7 +28,7 @@ export default function Home() {
             <h3 className="text-center font-yanone text-2xl text-[2.4rem] font-bold text-azul-900 md:text-[2.8125rem]">
               Teste Seus Conhecimentos
             </h3>
-            <p className="pt-5 text-left font-open-sans text-[1.3rem] text-base font-normal leading-relaxed md:text-[1.6rem] md:leading-normal">
+            <p className="pt-5 text-left font-poppins text-[1.3rem] text-base font-normal leading-relaxed md:text-[1.6rem] md:leading-normal">
               Com o Quiz: Coloque seus conhecimentos à prova com nossos quizzes
               interativos! Eles são uma maneira divertida de revisar o que você
               aprendeu e se preparar para o que vem pela frente. Responda às
@@ -45,7 +45,7 @@ export default function Home() {
             <h3 className="text-center font-yanone text-2xl text-[2.4rem] font-bold text-azul-900 md:text-[2.8125rem]">
               Crie Seu Personagem
             </h3>
-            <p className="pt-5 text-left font-open-sans text-[1.3rem] text-base leading-normal md:text-[1.6rem]">
+            <p className="pt-5 text-left font-poppins text-[1.3rem] text-base leading-normal md:text-[1.6rem]">
               Solte a imaginação e crie um personagem que seja a sua cara!
               Escolha entre uma variedade de roupas, acessórios e expressões
               para criar um amigo especial que estará ao seu lado em toda a
@@ -63,7 +63,7 @@ export default function Home() {
             <h3 className="mr-3 text-center font-yanone text-2xl text-[2.0rem] font-bold text-azul-900 md:text-start md:text-[2.8125rem]">
               Assista A Videos Educativos
             </h3>
-            <p className="mt-5 text-left font-open-sans text-[1.3rem] text-base leading-normal md:text-[1.6rem]">
+            <p className="mt-5 text-left font-poppins text-[1.3rem] text-base leading-normal md:text-[1.6rem]">
               Aprenda sobre o que acontece no hospital de maneira simples e
               interessante com nossos vídeos educativos. Cada vídeo é feito para
               explicar processos de forma clara e amigável, ajudando você a se
