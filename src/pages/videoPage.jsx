@@ -25,14 +25,14 @@ export default function VideoPage() {
   };
 
   return (
-    <div className="container mx-auto flex w-full flex-col gap-20 pt-20 lg:flex-row">
-      <div className="grow">
-        <div className="bg-amarelo-100 p-2">
-          <h1 id="exame-title" className="font-yanone text-3xl">
-            {findExame.name}:
-          </h1>
-        </div>
+    <div className="flex w-full flex-col pt-20">
+      <div className=" bg-amarelo-100 p-2">
+        <h1 id="exame-title" className="font-yanone py-3 text-3xl container mx-auto">
+          Tema: {findExame.name}
+        </h1>
+      </div>
 
+      <div className="container mx-auto grow">
         <div
           id="exame"
           className="relative h-[500px] gap-4 pt-3 sm:border md:h-[600px]"
@@ -90,10 +90,10 @@ export default function VideoPage() {
             onClick={() => handleClickExame()}
           ></div>
         </div>
-      </div>
 
-      <div className="mb-6 h-[20rem] w-full sm:pt-5 md:h-full md:w-[25rem]">
-        <SearchVideos destino="videos" />
+        <div className="mb-6 h-[20rem] w-full sm:pt-5 md:h-full lg:w-[25rem]">
+          <SearchVideos destino="videos" />
+        </div>
       </div>
     </div>
   );
