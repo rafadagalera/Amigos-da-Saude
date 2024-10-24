@@ -14,7 +14,6 @@ const MqttClient = () => {
         const mqttClient = mqtt.connect('wss://mqtt-dashboard.com:8884/mqtt', options);
 
 
-        // Set up event handlers
         mqttClient.on('connect', () => {
             console.log('Connected to MQTT broker');
             mqttClient.subscribe('teste/dagalera', (err) => {
@@ -35,7 +34,6 @@ const MqttClient = () => {
             console.error('MQTT Client Error:', error);
         });
 
-        // Clean up on component unmount
         return () => {
             mqttClient.end();
         };
