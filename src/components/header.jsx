@@ -8,14 +8,14 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 z-10 h-20 w-screen bg-turquesa-100">
+    <header className="fixed top-0 z-50 h-20 w-screen bg-turquesa-100">
       <div className="container relative mx-auto flex h-full items-center justify-between px-4">
         <div>LOGO</div>
 
         <Bars3Icon className="size-6 md:hidden" onClick={handleMenu} />
         <div
           id="menu_mobile"
-          className="absolute bottom-0 right-0 hidden translate-y-[100%] rounded-b-lg bg-azul-100 px-6 py-4 text-lg font-medium opacity-95 md:hidden"
+          className="absolute z-50 bottom-0 right-0 hidden translate-y-[100%] rounded-b-lg bg-azul-100 px-6 py-4 text-lg font-medium opacity-95 md:hidden"
         >
           <nav className="flex flex-col gap-5">
             <Link to="/" onClick={handleMenu}>
