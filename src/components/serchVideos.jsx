@@ -28,7 +28,7 @@ export const SearchVideos = ({ destino }) => {
         {filteredExames.map((quiz) => (
           <li
             key={quiz.id}
-            className="min-h-[30%] cursor-pointer rounded-lg border hover:bg-verde-100 md:min-h-[35%]"
+            className="min-h-[30%] cursor-pointer rounded-lg border hover:bg-verde- md:min-h-[35%]"
             onClick={() => navigate(`/${destino}/${quiz.id}`)}
           >
             <p className="px-3 py-2 text-lg font-semibold">{quiz.name}</p>
