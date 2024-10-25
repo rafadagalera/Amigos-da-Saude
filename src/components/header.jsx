@@ -50,13 +50,13 @@ export default function Header() {
             to="/quiz/1"
             className="text-azul-tipografia-titulo md:bg-verde-botao md:hover:bg-verde-hover-botao md:hover:text-cinza-tipografia-texto md:focus:bg-verde-focus-botao md:active:bg-verde-active-botao rounded-3xl text-sm font-medium transition hover:scale-110 md:px-4 md:py-2 md:focus:ring-2"
           >
-            QUIZ
+            VIDEOS
           </Link>
           <Link
             to="/videos"
             className="text-azul-tipografia-titulo md:bg-verde-botao md:hover:bg-verde-hover-botao md:hover:text-cinza-tipografia-texto md:focus:bg-verde-focus-botao md:active:bg-verde-active-botao rounded-3xl text-sm font-medium transition hover:scale-110 md:px-4 md:py-2 md:focus:ring-2"
           >
-            VIDEOS
+            QUIZ
           </Link>
         </nav>
       </div>
