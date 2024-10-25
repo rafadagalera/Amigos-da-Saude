@@ -27,7 +27,6 @@ export const ExamesProvider = ({ children }) => {
         "Médico: Após o exame, você pode voltar a comer normalmente e deve beber bastante água.",
         "Personagem: Legal! Obrigado, doutor!",
         "Médico: De nada! Agora que você sabe como funciona o exame de sangue, vamos começar!",
-
       ],
       quiz: [
         {
@@ -48,7 +47,8 @@ export const ExamesProvider = ({ children }) => {
           alternativas: {
             alternativa1: "Comer apenas frutas",
             alternativa2: "Beber bastante água antes do exame",
-            alternativa3: "Não comer ou beber nada por algumas horas antes do exame",
+            alternativa3:
+              "Não comer ou beber nada por algumas horas antes do exame",
             alternativa4: "Comer até ficar de barriga cheia",
           },
         },
@@ -68,7 +68,8 @@ export const ExamesProvider = ({ children }) => {
           pergunta: "O que acontece durante a coleta de sangue?",
           resposta: 3,
           alternativas: {
-            alternativa1: "Coletamos o máximo de sangue possível para tratar uma doença",
+            alternativa1:
+              "Coletamos o máximo de sangue possível para tratar uma doença",
             alternativa2: "O paciente precisa comer na hora do exame",
             alternativa3: "Coletamos uma amostra mínima de sangue do paciente",
             alternativa4: "É normal o paciente sentir muita dor",
@@ -115,57 +116,63 @@ export const ExamesProvider = ({ children }) => {
       quiz: [
         {
           id: 1,
-          pergunta: "pergunta 1 tomo",
-          resposta: 1,
+          pergunta: "Qual é o principal objetivo de uma tomografia?",
+          resposta: 2,
           alternativas: {
-            alternativa1: "alternativa tomo 1",
-            alternativa2: "alternativa tomo 1",
-            alternativa3: "alternativa tomo 1",
-            alternativa4: "alternativa tomo 1",
+            alternativa1: "Capturar imagens do sangue em circulação.",
+            alternativa2:
+              "Criar imagens detalhadas de órgãos internos e ossos.",
+            alternativa3: "Monitorar a frequência cardíaca.",
+            alternativa4: "Analisar os níveis de glicose no corpo.",
           },
         },
         {
           id: 2,
-          pergunta: "pergunta 2",
-          resposta: 3,
+          pergunta: "O que é necessário remover antes de uma tomografia?",
+          resposta: 4,
           alternativas: {
-            alternativa1: "alternativa tomo 2",
-            alternativa2: "alternativa tomo 2",
-            alternativa3: "alternativa tomo 2",
-            alternativa4: "alternativa tomo 2",
+            alternativa1: "Óculos de grau.",
+            alternativa2: "Aparelhos auditivos.",
+            alternativa3: "Chapéus ou bonés.",
+            alternativa4: "Objetos metálicos, como joias e piercings.",
           },
         },
         {
           id: 3,
-          pergunta: "pergunta 3",
-          resposta: 1,
+          pergunta: "Quanto tempo geralmente dura um exame de tomografia?",
+          resposta: 3,
           alternativas: {
-            alternativa1: "alternativa tivav tomo 3",
-            alternativa2: "alternativa tivav tomo 3",
-            alternativa3: "alternativa tivav tomo 3",
-            alternativa4: "alternativa tivav tomo 3",
+            alternativa1: "Cerca de 1 hora.",
+            alternativa2: "Entre 30 e 40 minutos.",
+            alternativa3: "Entre 5 e 10 minutos.",
+            alternativa4: "Mais de 2 horas.",
           },
         },
         {
           id: 4,
-          pergunta: "pergunta 4",
-          resposta: 3,
+          pergunta: "A tomografia computadorizada usa qual tipo de tecnologia?",
+          resposta: 1,
           alternativas: {
-            alternativa1: "alternativa tomo 4",
-            alternativa2: "alternativa tomo 4",
-            alternativa3: "alternativa tomo 4",
-            alternativa4: "alternativa tomo 4",
+            alternativa1:
+              "Raios-X em várias direções para criar imagens detalhadas.",
+            alternativa2: "Ondas sonoras para mapear o interior do corpo.",
+            alternativa3:
+              "Imãs poderosos para alinhar moléculas de água no corpo.",
+            alternativa4:
+              "Laseres infravermelhos para detectar calor corporal.",
           },
         },
         {
           id: 5,
-          pergunta: "pergunta 5",
+          pergunta:
+            "Por que o contraste é usado em alguns exames de tomografia?",
           resposta: 2,
           alternativas: {
-            alternativa1: "alternativa tomo 5",
-            alternativa2: "alternativa tomo 5",
-            alternativa3: "alternativa tomo 5",
-            alternativa4: "alternativa tomo 5",
+            alternativa1: "Para ajudar a reduzir o tempo de exame.",
+            alternativa2:
+              "Para destacar órgãos ou tecidos específicos nas imagens.",
+            alternativa3: "Para melhorar a resolução da imagem.",
+            alternativa4: "Para evitar a exposição excessiva à radiação.",
           },
         },
       ],
@@ -197,61 +204,61 @@ export const ExamesProvider = ({ children }) => {
       ],
       quiz: [
         {
-          id: 1,
-          pergunta: "pergunta 1 raio-x",
-          resposta: 1,
-          alternativas: {
-            alternativa1: "alternativa tivav tiva tiva",
-            alternativa2: "alternativa tivav tiva tiva",
-            alternativa3: "alternativa tivav tiva tiva",
-            alternativa4: "alternativa tivav tiva tiva",
-          },
+            id: 1,
+            pergunta: "Qual é a principal função do exame de raio-X?",
+            resposta: 1,
+            alternativas: {
+                alternativa1: "Obter imagens de estruturas ósseas.",
+                alternativa2: "Avaliar a função cardíaca.",
+                alternativa3: "Medir o nível de açúcar no sangue.",
+                alternativa4: "Monitorar o funcionamento do cérebro.",
+            },
         },
         {
-          id: 2,
-          pergunta: "pergunta 2",
-          resposta: 3,
-          alternativas: {
-            alternativa1: "teste teste teste alternativa",
-            alternativa2: "ttetetetete",
-            alternativa3: "dsdasdasda",
-            alternativa4: "iago ta enchendo o saco pra caralho hoje",
-          },
+            id: 2,
+            pergunta: "O que pode interferir na qualidade de um raio-X?",
+            resposta: 4,
+            alternativas: {
+                alternativa1: "Uso de sapatos confortáveis.",
+                alternativa2: "Beber água antes do exame.",
+                alternativa3: "Tirar um cochilo antes do exame.",
+                alternativa4: "Presença de objetos metálicos, como relógios ou colares.",
+            },
         },
         {
-          id: 3,
-          pergunta: "pergunta 3",
-          resposta: 1,
-          alternativas: {
-            alternativa1: "alternativa tivav tiva tiva",
-            alternativa2: "alternativa tivav tiva tiva",
-            alternativa3: "alternativa tivav tiva tiva",
-            alternativa4: "alternativa tivav tiva tiva",
-          },
+            id: 3,
+            pergunta: "Quanto tempo demora para tirar uma imagem de raio-X?",
+            resposta: 3,
+            alternativas: {
+                alternativa1: "Mais de uma hora.",
+                alternativa2: "Cerca de 30 minutos.",
+                alternativa3: "Alguns segundos.",
+                alternativa4: "Entre 15 a 20 minutos.",
+            },
         },
         {
-          id: 4,
-          pergunta: "pergunta 4",
-          resposta: 3,
-          alternativas: {
-            alternativa1: "teste teste teste alternativa",
-            alternativa2: "ttetetetete",
-            alternativa3: "dsdasdasda",
-            alternativa4: "iago ta enchendo o saco pra caralho hoje",
-          },
+            id: 4,
+            pergunta: "Por que os profissionais de saúde se afastam durante o exame de raio-X?",
+            resposta: 2,
+            alternativas: {
+                alternativa1: "Porque o exame causa muito barulho.",
+                alternativa2: "Para evitar exposição à radiação.",
+                alternativa3: "Para garantir que o paciente esteja confortável.",
+                alternativa4: "Porque precisam ajustar o equipamento remotamente.",
+            },
         },
         {
-          id: 5,
-          pergunta: "pergunta 5",
-          resposta: 2,
-          alternativas: {
-            alternativa1: "alternativa tivav tiva tiva",
-            alternativa2: "alternativa tivav tiva tiva",
-            alternativa3: "alternativa tivav tiva tiva",
-            alternativa4: "alternativa tivav tiva tiva",
-          },
+            id: 5,
+            pergunta: "Para que é usado o avental de chumbo durante um exame de raio-X?",
+            resposta: 1,
+            alternativas: {
+                alternativa1: "Para proteger áreas do corpo da radiação.",
+                alternativa2: "Para manter o paciente aquecido.",
+                alternativa3: "Para estabilizar o paciente na mesa de exame.",
+                alternativa4: "Para ajudar a capturar imagens mais nítidas.",
+            },
         },
-      ],
+    ],
     },
   ];
 
