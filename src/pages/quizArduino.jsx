@@ -34,7 +34,7 @@ export default function QuizArduino() {
 
     ]
     return (
-        <div className='w-full md:w-3/4 md:m-auto h-screen  bg-white'>
+        <div className='flex flex-col gap-8 h-screen bg-azul-claro-100'>
         <h1 className='text-6xl p-12 pb-0 md:mt-20 md:mb-12 text-teal-700'>Aprenda de um jeito mais divertido com nosso<b> quizz no controle!</b></h1>
         <Carousel
             additionalTransfrom={0}
@@ -90,7 +90,7 @@ export default function QuizArduino() {
             swipeable
         >
             {cards.map((card) => (
-                <div key={card.id} className={` rounded-lg bg-slate-200 p-12`}>
+                <div key={card.id} className={`rounded-lg ml-12 pb-20`}>
                     <div className='text-lg'>
                         <h2 className='mb-3 text-2xl'> <b>{card.title}</b></h2>
                         <div className='text-justify'>{card.description}</div>
