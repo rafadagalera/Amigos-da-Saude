@@ -38,7 +38,7 @@ export const ExamesProvider = ({ children }) => {
             alternativa1: "Ficar em jejum por algumas horas",
             alternativa2: "Tomar um remédio para preparar para o exame",
             alternativa3: "Comer bastante",
-            alternativa4: "Fazer exercícios físicos intensos.",
+            alternativa4: "Fazer exercícios físicos intensos",
           },
         },
         {
@@ -70,7 +70,7 @@ export const ExamesProvider = ({ children }) => {
           alternativas: {
             alternativa1: "Coletamos o máximo de sangue possível para tratar uma doença",
             alternativa2: "O paciente precisa comer na hora do exame",
-            alternativa3: "Coletamos uma amostra mínima de sangue do paciente.",
+            alternativa3: "Coletamos uma amostra mínima de sangue do paciente",
             alternativa4: "É normal o paciente sentir muita dor",
           },
         },
