@@ -57,7 +57,7 @@ export default function Quiz() {
       console.log("acabou");
       console.log(pontuacao);
 
-      pergunta.innerHTML = `Acabou, sua pontuação foi: ${pontuacao}`;
+      pergunta.innerHTML = `Acabou, sua pontuação foi: ${pontuacao * 10}`;
 
       alternativa1.classList.add("hidden");
       alternativa2.classList.add("hidden");
