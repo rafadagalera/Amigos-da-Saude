@@ -40,8 +40,7 @@ const MqttClient = () => {
     }, []);
 
     return (
-        <div>
-            <h1>MQTT Messages</h1>
+        <div className='pl-11 bg-azul-claro-100 text-2xl font-yanone text'>
             <ul>
                 {messages.map((msg, index) => (
                     <li key={index}>{msg}</li>
